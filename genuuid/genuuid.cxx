@@ -1,14 +1,14 @@
+#include <libstud-uuid/stud-uuid.hxx>
+
 #include <iostream>
 
 int main (int argc, char* argv[])
 {
-  using namespace std;
-
   if (argc < 2)
   {
-    cerr << "error: missing name" << endl;
+    std::cerr << "error: missing name\n";
     return 1;
   }
 
-  cout << "Hello, " << argv[1] << '!' << endl;
+  stud_uuid::say_hello(std::cout, argv[1]);
 }
